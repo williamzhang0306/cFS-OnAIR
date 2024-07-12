@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  cfs-onair:
+    container_name: cfs-onair
+    volumes:
+      - "./:/cFS-fsw"
+    working_dir: "/cFS-fsw"
+    build:
+      context: .
+    stdin_open: true
+    tty: true
+    privileged: true
